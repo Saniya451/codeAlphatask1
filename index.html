@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e7f5ef">
+  <title>Little Numbers Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="calculator" aria-label="Calculator">
+      <header class="topbar">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <span class="brand-name">little numbers</span>
+        <span class="status-dot" aria-label="Ready"></span>
+      </header>
+
+      <div class="display" aria-live="polite" aria-atomic="true">
+        <div class="display-label">YOUR CALCULATION, SO FAR</div>
+        <div class="expression" id="expression">Ready when you are</div>
+        <div class="result-row"><span class="equals-sign">=</span><output class="result" id="result">0</output></div>
+      </div>
+
+      <div class="keypad" aria-label="Calculator keys">
+        <button class="key key-utility key-clear" data-action="clear" aria-label="Clear all">AC</button>
+        <button class="key key-utility" data-action="sign" aria-label="Change sign">+/-</button>
+        <button class="key key-utility" data-action="percent" aria-label="Percent">%</button>
+        <button class="key key-operator" data-operator="/" aria-label="Divide">÷</button>
+
+        <button class="key" data-digit="7">7</button>
+        <button class="key" data-digit="8">8</button>
+        <button class="key" data-digit="9">9</button>
+        <button class="key key-operator" data-operator="*" aria-label="Multiply">×</button>
+
+        <button class="key" data-digit="4">4</button>
+        <button class="key" data-digit="5">5</button>
+        <button class="key" data-digit="6">6</button>
+        <button class="key key-operator" data-operator="-" aria-label="Subtract">−</button>
+
+        <button class="key" data-digit="1">1</button>
+        <button class="key" data-digit="2">2</button>
+        <button class="key" data-digit="3">3</button>
+        <button class="key key-operator" data-operator="+" aria-label="Add">+</button>
+
+        <button class="key key-zero" data-digit="0">0</button>
+        <button class="key" data-action="decimal" aria-label="Decimal point">.</button>
+        <button class="key key-equals" data-action="equals" aria-label="Equals">=</button>
+      </div>
+
+      <footer class="calculator-footer">
+        <span class="sticker sticker-frog" aria-hidden="true">🐸</span>
+        <span>a little joy in every calculation</span>
+        <span class="sticker sticker-flower" aria-hidden="true">🌼</span>
+      </footer>
+    </section>
+    <p class="keyboard-hint"><kbd>Enter</kbd> to solve <span>·</span> <kbd>Esc</kbd> to start fresh</p>
+  </main>
+</body>
+</html>
